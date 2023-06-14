@@ -10,17 +10,13 @@ int main() {
     FILE* fp;
     
     fp = fopen("passwords.txt", "a");
-    
-    printf("\n----------------------------------\n");
-    printf("This project belongs to EnderGuy77\n");
-    printf("----------------------------------\n");
 
-    
-    printf("\nEnter the Lenght: ");
+    printf("Enter the Lenght: ");
     scanf("%d", &length);
+    getchar();
 
     printf("Enter the Name of site(max. characters 100): ");
-    scanf("%s", s, 100);
+    scanf("%[^\n]", s, 100);
     
     if (length < 8)
     {
